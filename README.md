@@ -1,8 +1,8 @@
 ## MÓDULO2 semana 8
 
-# 🚦 Exercícios do Trello
+# 🚦 Exercícios do Trello e em aula
 
-Este repositório é para minha prática e resolução dos exercícios proposto pelos professores durante o **semana7** no curso **FuturoDev trilha TRIP** o qual estou inserida a desenvolver neste curso ofertado pelo **FloripaMaisTech** com a Lab365, Senai e Acate/SC.
+Este repositório é para minha prática e resolução dos exercícios proposto pelo professore durante o **semana8** no curso **FuturoDev trilha TRIP** o qual estou inserida a desenvolver neste curso ofertado pelo **FloripaMaisTech** com a Lab365, Senai e Acate/SC.
 
 ### SEMANA 8 **com a professora Yan Esteves** 
   - Recapitulando (Hooks)   
