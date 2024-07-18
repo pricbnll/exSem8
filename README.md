@@ -211,7 +211,9 @@ Import a function que esta no web.js
 
 TODA A VEZ QUE ESTIVER UMA CHAMADA DE API USAREI para resposta no inicio da chamada
 
-import...
+import { useState, useEffect } from 'react'
+import './App.css'
+import { getUsers } from './services/web'
 
 function App() {
 
@@ -234,7 +236,6 @@ function App() {
      console.log('componente iniciado App.jsx')
      async function fetchData() {
        const response = await getUsers()
-       console.log(response)
        setUsers(response)
      }
      fetchData();
@@ -245,14 +246,12 @@ function App() {
      <>
        <ul>
          {users.map(user => <li key={user.id}>{user.name} ({user.email})</li>)}
-         {/* <li>Nome (email)</li> */}
-         {/* <li>Yan Esteves (yan.m.esteves@gmail.com)</li>
-         <li>Joao Coelho (joao.coelho@gmail.com)</li> */}
        </ul>
      </>
    )
  }
- export default App
+
+export default App
 ```
 
 ## 🛠️ Construído com
@@ -265,13 +264,9 @@ function App() {
 - Bootstrap
   
 
-## 🧑🏻‍🏫 Professores
+## 🧑🏻‍🏫 Professor
 
-* **Nicholas Macedo** - [GitHub](https://github.com/nicholasmacedoo)
-
-## 📄 Acompanhe as resoluções e dicas de aulas
-
-**FuturoDev - Trip** - [GitHub do curso] (https://github.com/FuturoDEV-Trip/MS2S07)
+**Yan Esteves** - [GitHub](https://github.com/yanestevesufjf/react_rotas)
 
 
 ## 🎁 Expressões de gratidão
