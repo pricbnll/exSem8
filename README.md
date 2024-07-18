@@ -1,15 +1,13 @@
-## MÓDULO2 semana 7
+## MÓDULO2 semana 8
 
 # 🚦 Exercícios do Trello
 
 Este repositório é para minha prática e resolução dos exercícios proposto pelos professores durante o **semana7** no curso **FuturoDev trilha TRIP** o qual estou inserida a desenvolver neste curso ofertado pelo **FloripaMaisTech** com a Lab365, Senai e Acate/SC.
 
-### SEMANA 7 **com o professor Nicholas Macedo**
-  - Introdução a React Hooks
-  - Fluxo de dados em um aplicativo React
-  - PropTypes, useState/useEffect, useRef Controlados x Não Controlados, Custom Hooks
-  
-  - O exercício da semana 7, sendo um contador, se encontra [neste repositório](https://github.com/pricbnll/contador)
+### SEMANA 8 **com a professora Yan Esteves** 
+  - Recapitulando (Hooks)   
+  - UseState
+  - UseEffect
   
 ## Rodar o projeto
 
@@ -60,40 +58,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 importação no arquivo main.jsx
 ```
 
+Rodar no terminal:
 
-## 🛠️ Construído com
-
-- Trello - aprendendo a criar e mover cards.
-- VsCode - aprendendo a usar a ferramenta e suas extensões.
-- GitHub - aprendendo a utilizar sempre enviando ou trazendo para meu local o repositório, fazendo alterações...
-- React - hooks
-- Vite
-- Bootstrap
-  
-
-## 🧑🏻‍🏫 Professores
-
-* **Nicholas Macedo** - [GitHub](https://github.com/nicholasmacedoo)
-
-## 📄 Acompanhe as resoluções e dicas de aulas
-
-**FuturoDev - Trip** - [GitHub do curso] (https://github.com/FuturoDEV-Trip/MS2S07)
-
-
-## 🎁 Expressões de gratidão
-
-* Adorando este curso super podendo fazer perguntas para embasar meu raciocínio 📢;
-* Lab365 e todos os monitores;
-* Qualquer dúvida ou sugestão de melhorar o código eu aceito;
-* Um agradecimento publicamente 🫂 aos melhores amigos de turma que podia ter - TRIP e NATURE!
-
-
-
+```
 npm install -g json-server
+```
 
+---------> Criar pasta services > web.js
 
----------> pasta services > web.js
-
+```
 export async function getUsers() {
     <!-- console.log(getUsers::deu certo) -->
     const response = await fetch('http://localhost:3000/users', { method: 'GET' })
@@ -103,8 +76,11 @@ export async function getUsers() {
 
     return data
 }
+```
 
----------> db.json
+---------> Criar pasta > db.json
+
+```
 {
   "users": [
     {
@@ -125,11 +101,17 @@ export async function getUsers() {
       }
   ]
 }
+```
 
+Rodar no terminal: 
 
---------> npx json-server db.json
+```
+npx json-server db.json
+```
 
-AParece no console:
+Aparece no console:
+
+```
 JSON Server started on PORT :3000
 Press CTRL-C to stop
 Watching db.json...
@@ -145,9 +127,13 @@ Serving ./public directory if it exists
 Endpoints:
 http://localhost:3000/users
 <!-- http://localhost:3000/bicicletas -->
+```
 
+---------> Na pasta ja criada > app.jsx
 
----------> app.jsx
+```
+Fazer primeira etapa e verificar:
+
 import ...
 function App() {
   const [users, setUsers] = useState()
@@ -168,6 +154,9 @@ function App() {
   )
 }
 export ....
+```
+```
+Fazer segunda etapa e verificar:
 
 function App() {
     const [users, setUsers] = useState()
@@ -189,6 +178,9 @@ function App() {
     </>
   )
 }
+```
+```
+Fazer terceira etapa e verificar:
 
 TODA A VEZ QUE ESTIVER UMA CHAMADA DE API USAREI para resposta no inicio da chamada
 
@@ -233,6 +225,37 @@ function App() {
      </>
    )
  }
+```
+
+## 🛠️ Construído com
+
+- Trello - aprendendo a criar e mover cards.
+- VsCode - aprendendo a usar a ferramenta e suas extensões.
+- GitHub - aprendendo a utilizar sempre enviando ou trazendo para meu local o repositório, fazendo alterações...
+- React - hooks
+- Vite
+- Bootstrap
+  
+
+## 🧑🏻‍🏫 Professores
+
+* **Nicholas Macedo** - [GitHub](https://github.com/nicholasmacedoo)
+
+## 📄 Acompanhe as resoluções e dicas de aulas
+
+**FuturoDev - Trip** - [GitHub do curso] (https://github.com/FuturoDEV-Trip/MS2S07)
+
+
+## 🎁 Expressões de gratidão
+
+* Adorando este curso super podendo fazer perguntas para embasar meu raciocínio 📢;
+* Lab365 e todos os monitores;
+* Qualquer dúvida ou sugestão de melhorar o código eu aceito;
+* Um agradecimento publicamente 🫂 aos melhores amigos de turma que podia ter - TRIP e NATURE!
+
+
+
+
  
 
 export default App
