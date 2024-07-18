@@ -129,8 +129,15 @@ http://localhost:3000/users
 <!-- http://localhost:3000/bicicletas -->
 ```
 
+A tela ficará assim : http://localhost:5173/
+
+<img src='./sem8/src/assets/Tela localhost3000 npx json-server dbjson.png'>
+
+
 ---------> Na pasta ja criada > app.jsx
+
 Ps: Delete tags, imports, variáveis criadas pelo Vite que não utilizará. Geralmente o tema colocara estas com uma cor opaca.
+
 Ps2: Acrescente funcionalidades necessárias como ```import { useEffect } from 'react'```
 
 ```
@@ -158,6 +165,7 @@ function App() {
 export ....
 ```
 A tela ficará assim : http://localhost:5173/
+
 <img src='./sem8/src/assets/Fazer primeira etapa e verificar.png'>
 
 
