@@ -8,6 +8,9 @@ Este repositório é para minha prática e resolução dos exercícios proposto 
   - Recapitulando (Hooks)   
   - UseState
   - UseEffect
+  - SPA
+  - React Router-DOM (npm i react-router-dom) 
+    -suporta rotas dinâmicas
   
 ## Rodar o projeto
 
@@ -66,6 +69,8 @@ sudo npm install -g json-server
 
 ---------> Criar pasta services dentro da pasta src> web.js
 
+
+AULA1
 ```
 export async function getUsers() {
     // console.log('getUsers::deu certo')
@@ -253,6 +258,39 @@ function App() {
 
 export default App
 ```
+
+AULA2
+
+instalar sudo npm i react-router-dom
+
+app.jsx
+
+```
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
+import './App.css'
+import SignIn from './pages/Singin/Singin'
+import SignUp from './/pages/Singup/Signup'
+
+function App() {
+
+  return (
+    <>
+      <Router> {/* switch */}
+        <Routes>
+          <Route path='/' Component={Signin} />
+          <Route path='/login' Component={Signin} />
+          <Route path='/cadastro' Component={Signup} />
+        </Routes>
+      </Router>
+    </>
+  )
+}
+
+export default App
+
+Ps. Pode haver de ser Router ao invés de BrowserRouter
+```
+
 
 ## 🛠️ Construído com
 
