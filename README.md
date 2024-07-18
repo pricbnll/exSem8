@@ -20,8 +20,8 @@ npm create vite@latest
     - React
     - JavaScript
 
-npm install
-npm run dev
+sudo npm install
+sudo npm run dev
 
 ps. Se estiver no MAC coloque sudo antes do npm
 ```
@@ -53,7 +53,7 @@ export default {
 Componentes Bootstrap:
 
 ```
-npm install bootstrap@5.3.3
+sudo npm install bootstrap@5.3.3
 import 'bootstrap/dist/css/bootstrap.min.css'
 importação no arquivo main.jsx
 ```
@@ -61,17 +61,17 @@ importação no arquivo main.jsx
 Rodar no terminal:
 
 ```
-npm install -g json-server
+sudo npm install -g json-server
 ```
 
----------> Criar pasta services > web.js
+---------> Criar pasta services dentro da pasta src> web.js
 
 ```
 export async function getUsers() {
-    <!-- console.log(getUsers::deu certo) -->
+    console.log('getUsers::deu certo')
     const response = await fetch('http://localhost:3000/users', { method: 'GET' })
     const data = await response.json()
-    <!-- console.log(response) -->
+    //  console.log(response) 
     getUsers(response)
 
     return data
@@ -130,6 +130,8 @@ http://localhost:3000/users
 ```
 
 ---------> Na pasta ja criada > app.jsx
+Ps: Delete tags, imports, variáveis criadas pelo Vite que não utilizará. Geralmente o tema colocara estas com uma cor opaca.
+Ps2: Acrescente funcionalidades necessárias como ```import { useEffect } from 'react'```
 
 ```
 Fazer primeira etapa e verificar:
@@ -155,6 +157,10 @@ function App() {
 }
 export ....
 ```
+A tela ficará assim : http://localhost:5173/
+<img src='./sem8/src/assets/Fazer primeira etapa e verificar.png'>
+
+
 ```
 Fazer segunda etapa e verificar:
 
