@@ -68,7 +68,7 @@ sudo npm install -g json-server
 
 ```
 export async function getUsers() {
-    console.log('getUsers::deu certo')
+    // console.log('getUsers::deu certo')
     const response = await fetch('http://localhost:3000/users', { method: 'GET' })
     const data = await response.json()
     //  console.log(response) 
@@ -162,7 +162,7 @@ function App() {
     </>
   )
 }
-export ....
+ export default App
 ```
 A tela ficará assim : http://localhost:5173/
 
@@ -172,29 +172,42 @@ A tela ficará assim : http://localhost:5173/
 ```
 Fazer segunda etapa e verificar:
 
+import { useEffect } from 'react'
+import './App.css'
+
 function App() {
-    const [users, setUsers] = useState()
 
-  useEffect(() => {
-    <!-- // EXECUTA ALGO NO INICIO DO COMPONENTE -->
-    console.log('componente iniciado App.jsx')
 
-  }, [])
+useEffect(() => {
+  // EXECUTA ALGO NO INICIO DO COMPONENTE
+  console.log('componente iniciado App.jsx')
 
-  return (
-    <>
-      <ul>
-        {users.map(user => <li key={user.id}>{user.name} ({user.email})</li>)}
-        <!-- {/* <li>Nome (email)</li> */}
-        {/* <li>Yan Esteves (yan.m.esteves@gmail.com)</li>
-        <li>Joao Coelho (joao.coelho@gmail.com)</li> */} -->
-      </ul>
-    </>
-  )
+}, [])
+
+return (
+  <>
+    <ul>
+      {/* <li>Nome (email)</li> */}
+      <li>Yan Esteves (yan.m.esteves@gmail.com)</li>
+      <li>Joao Coelho (joao.coelho@gmail.com)</li> 
+    </ul>
+  </>
+)
 }
+
+export default App
+
+----> VERIFIQUE SE NO CONSOLE ESTA APARECENDO A MENSAGEM: 
+componente iniciado App.jsx
+
+SE SIM ESTA BACANA O RACIOCÍNIO!!!
 ```
 ```
 Fazer terceira etapa e verificar:
+Acrescente funcionalidades necessárias como:
+    import { useState, useEffect } from 'react'
+Import a function que esta no web.js
+    import { getUsers } from './services/web'
 
 TODA A VEZ QUE ESTIVER UMA CHAMADA DE API USAREI para resposta no inicio da chamada
 
@@ -217,7 +230,7 @@ function App() {
 )
 
   useEffect(() => {
-     <!-- // EXECUTA ALGO NO INICIO DO COMPONENTE -->
+     // EXECUTA ALGO NO INICIO DO COMPONENTE 
      console.log('componente iniciado App.jsx')
      async function fetchData() {
        const response = await getUsers()
@@ -232,13 +245,14 @@ function App() {
      <>
        <ul>
          {users.map(user => <li key={user.id}>{user.name} ({user.email})</li>)}
-         <!-- {/* <li>Nome (email)</li> */}
+         {/* <li>Nome (email)</li> */}
          {/* <li>Yan Esteves (yan.m.esteves@gmail.com)</li>
-         <li>Joao Coelho (joao.coelho@gmail.com)</li> */}  -->
+         <li>Joao Coelho (joao.coelho@gmail.com)</li> */}
        </ul>
      </>
    )
  }
+ export default App
 ```
 
 ## 🛠️ Construído com
