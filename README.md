@@ -11,6 +11,7 @@ Este repositório é para minha prática e resolução dos exercícios proposto 
   - SPA
   - React Router-DOM (npm i react-router-dom) 
     -suporta rotas dinâmicas
+  - Link (https://reactrouter.com/en/main/components/link)
   
 ## Rodar o projeto
 
@@ -291,6 +292,96 @@ export default App
 Ps. Pode haver de ser Router ao invés de BrowserRouter
 ```
 
+pasta Signin >Signin
+
+```
+function Signin() {
+    return (
+        <>
+            <h1>Login</h1>
+        </>
+    )
+}
+
+export default Signin
+```
+
+pasta Signup >Signup
+
+```
+function Signup() {
+    return (
+        <>
+            <h1>Cadastro</h1>
+        </>
+    )
+}
+
+export default Signup
+```
+
+BASE PARA AUTENTICAÇÃO  ---> USE E NÃO PERCA
+
+```
+import {
+  Routes,
+  Route,
+  BrowserRouter as Router,
+  Navigate,
+} from "react-router-dom";
+import "./App.css";
+import Signin from "./pages/Singin/Singin";
+import Signup from "./pages/Singup/Signup";
+import Home from "./pages/Home/Home";
+
+function App() {
+  const isAuthenticated = true;
+  // se true vai para a pagina Login, se false vai para Home
+
+  function loginRedirect(componente) {
+    if (isAuthenticated) {
+      return <Navigate to="/" replace />;
+    }
+
+    return componente;
+  }
+
+  return (
+    <>
+      <Router>
+        {" "}
+        {/* switch */}
+        <Routes>
+          <Route path="/login" element={loginRedirect(<Signin />)} />
+          <Route path="/cadastro" element={loginRedirect(<Signup />)} />
+
+
+          {/* Se quiser uma rota que não precisa de autenticação coloque aqui a rota */}
+
+          {/* Ternário para redirecionar rota */}
+          {isAuthenticated ? (
+          //Se quiser uma rota autenticada coloque aqui a rota 
+            <>
+              <Route path="/" Component={Home} />
+            </>
+          ) : (
+            <Route path="*" element={<Navigate replace to="/login" />} />
+          )}
+
+          <Route path="/login" Component={Signin} />
+          <Route path="/cadastro" Component={Signup} />
+        </Routes>
+      </Router>
+    </>
+  );
+}
+
+export default App;
+```
+
+
+
+
 
 ## 🛠️ Construído com
 
@@ -313,10 +404,3 @@ Ps. Pode haver de ser Router ao invés de BrowserRouter
 * Lab365 e todos os monitores;
 * Qualquer dúvida ou sugestão de melhorar o código eu aceito;
 * Um agradecimento publicamente 🫂 aos melhores amigos de turma que podia ter - TRIP e NATURE!
-
-
-
-
- 
-
-export default App

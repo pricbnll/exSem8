@@ -15,6 +15,8 @@ function App() {
   // se true vai para a pagina Login, se false vai para Home
 
   function loginRedirect(componente) {
+    //console.log('loginRedirect')
+    //console.lo(componente)
     if (isAuthenticated) {
       return <Navigate to="/" replace />;
     }
