@@ -8,6 +8,7 @@ import "./App.css";
 import Signin from "./pages/Singin/Singin";
 import Signup from "./pages/Singup/Signup";
 import Home from "./pages/Home/Home";
+import Bicicletas from "./pages/Bicicletas/Bicicletas";
 
 function App() {
   const isAuthenticated = true;
@@ -38,6 +39,7 @@ function App() {
           //Se quiser uma rota autenticada coloque aqui a rota 
             <>
               <Route path="/" Component={Home} />
+              <Route path="/bicicletas" Component={Bicicletas} />
             </>
           ) : (
             <Route path="*" element={<Navigate replace to="/login" />} />
