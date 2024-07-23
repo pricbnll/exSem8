@@ -17,6 +17,7 @@ function App() {
   function loginRedirect(componente) {
     //console.log('loginRedirect')
     //console.lo(componente)
+    //console.log(`loginRedirect::isAuthenticated::${isAuthenticated}`)
     if (isAuthenticated) {
       return <Navigate to="/" replace />;
     }
@@ -36,7 +37,7 @@ function App() {
 
           {/* Se quiser uma rota que não precisa de autenticação coloque aqui a rota */}
 
-          {/* Ternário para redirecionar rota */}
+          {/* Ternário para redirecionar rota PS: Pode ter  rotas que não apareçam pel condição do ternário*/}
           {isAuthenticated ? (
           //Se quiser uma rota autenticada coloque aqui a rota 
             <>
