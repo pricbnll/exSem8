@@ -1,3 +1,9 @@
+:root {
+  --yellow: rgb(255, 204, 0);
+  --black: rgb(26, 26, 26);
+  --white: white;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

@@ -254,6 +254,11 @@ function App() {
 export default App
 ```
 
+
+```
+npm install react-router-dom
+```
+
 ## 🛠️ Construído com
 
 - Trello - aprendendo a criar e mover cards.
@@ -262,6 +267,8 @@ export default App
 - React - hooks
 - Vite
 - Bootstrap
+- React Router
+
   
 
 ## 🧑🏻‍🏫 Professor
@@ -276,10 +283,3 @@ export default App
 * Lab365 e todos os monitores;
 * Qualquer dúvida ou sugestão de melhorar o código eu aceito;
 * Um agradecimento publicamente 🫂 aos melhores amigos de turma que podia ter - TRIP e NATURE!
-
-
-
-
- 
-
-export default App
