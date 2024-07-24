@@ -267,6 +267,7 @@ export default App
 ## 🧑🏻‍🏫 Professor
 
 **Yan Esteves** - [GitHub](https://github.com/yanestevesufjf/react_rotas)
+                  [GitHub Aula](https://github.com/FuturoDEV-Nature/react_boilerplate)
 
 
 ## 🎁 Expressões de gratidão
