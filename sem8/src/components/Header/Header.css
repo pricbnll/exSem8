@@ -11,8 +11,9 @@
     left: 0px;
     right: 0px;
     height: 72px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 120px;
+    padding-right: 120px;
+    z-index: 1;
 }
 
 img {

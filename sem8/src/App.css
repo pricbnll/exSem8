@@ -2,6 +2,8 @@
   --yellow: rgb(255, 204, 0);
   --black: rgb(26, 26, 26);
   --white: white;
+  --gray: rgb(102, 102, 102);
+  --light-gray: rgb(153, 153, 153);
 }
 
 #root {

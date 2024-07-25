@@ -26,7 +26,7 @@ sudo npm run dev
 ps. Se estiver no MAC coloque sudo antes do npm
 ```
 
-Assim aparecerá a url que renderizirá seu projeto no browser:
+Assim aparecerá a url que renderizará seu projeto no browser:
 
 ```
 react-trip@0.0.0 dev vite
