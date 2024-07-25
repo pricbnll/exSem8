@@ -1,0 +1,36 @@
+
+.homeContainer {
+    left: 0px;
+    top: 64px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 204, 0);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 464px;
+    background-size: auto 700px;
+}
+
+h1 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 36px;
+    margin-top: 72px;
+}
+
+.size-6 {
+    width: 24px; 
+    height: 24px;
+    color: var(--gray);
+    
+}
+
+input {
+    width: 55%;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--light-gray);
+    padding-left: 48px;
+}
+
