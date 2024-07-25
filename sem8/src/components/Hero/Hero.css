@@ -32,5 +32,8 @@ input {
     border-radius: 8px;
     border: 1px solid var(--light-gray);
     padding-left: 48px;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 20px;
 }
 
