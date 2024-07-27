@@ -1,6 +1,8 @@
 import Header from '../../components/Header/Header'
 import Hero from '../../components/Hero/Hero'
 import CategoriaProduto from '../Products/CategoriaProduto'
+import { useState, useEffect,  } from 'react'
+import AgeVerificationModal from '../../components/Modal/AgeModal'
 
 import './Home.css'
 
@@ -48,11 +50,31 @@ function Home() {
         },
     ]
 
+    const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const modalShown = localStorage.getItem('ageVerificationShown');
+    if (!modalShown) {
+      setShowModal(true);
+      localStorage.setItem('ageVerificationShown', 'true');
+    }
+  }, []);
+
+  const handleCloseModal = (confirmed) => {
+    if (confirmed) {
+      // Usuário confirmou
+      console.log('Usuário é maior de 18 anos.');
+    } else {
+      // Usuário não confirmou, redirecionar ou executar outra ação
+      console.log('Usuário não é maior de 18 anos.');
+    }
+    setShowModal(false);
+  };    
     return ( 
         <> 
             <Header/>
             <Hero/> 
-
+                {showModal && <AgeVerificationModal onClose={handleCloseModal} />}
                <div className="content">
                      <div className="lista-categorias">
                     {PRODUTOS.map(produto => 
