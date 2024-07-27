@@ -62,10 +62,8 @@ function Home() {
 
   const handleCloseModal = (confirmed) => {
     if (confirmed) {
-      // Usuário confirmou
       console.log('Usuário é maior de 18 anos.');
     } else {
-      // Usuário não confirmou, redirecionar ou executar outra ação
       console.log('Usuário não é maior de 18 anos.');
     }
     setShowModal(false);
