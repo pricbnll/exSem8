@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
 
-
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +11,7 @@ function Login() {
     event.preventDefault();
     if (email === "admin@admin.com" && password === "admin123") {
       console.log(email, password);
-      navigate("/home"); // Redireciona para a página inicial
+      navigate("/home"); 
     } else {
       console.log("Credenciais inválidas");
     }
@@ -72,8 +71,6 @@ function Login() {
 
 export default Login;
 
-
-
 // // ter icone que mostra senha
 // const [showPassword, setShowPassword] = useState(false); // Novo estado para controlar a visibilidade da senha
 
@@ -110,5 +107,3 @@ export default Login;
 //   font-size: 1.2em;
 //   padding-left: 0.5em;
 // }
-
-
