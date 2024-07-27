@@ -1,19 +1,24 @@
 import { useState } from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
+
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-    const [ email, setEmail] = useState('')
-    const [ password, setPassword] = useState('')
-
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        console.log(email, password)
-        setEmail('')
-        setPassword('');
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (email === "admin@admin.com" && password === "admin123") {
+      console.log(email, password);
+      navigate("/home"); // Redireciona para a página inicial
+    } else {
+      console.log("Credenciais inválidas");
     }
-
-
+    setEmail("");
+    setPassword("");
+  };
 
   return (
     <>
@@ -35,16 +40,30 @@ function Login() {
           <hr />
         </div>
 
-        <form onClick={handleSubmit} >
-            <p>Insira seu e-mail para entrar ou se cadastrar:</p>
-            
-            <input type="email" placeholder="Digite seu email:" value={email} onChange={(e) => setEmail(e.target.value)}/>
+        <form onSubmit={handleSubmit}>
+          <p>Insira seu e-mail para entrar ou se cadastrar:</p>
 
-            <input type="password" placeholder="Digite sua senha:" {...password} onChange={(e) => setPassword (e.target.value)}/>
-            
-            <button type="submit" className="email">Continuar com E-mail</button>
+          <input
+            type="email"
+            placeholder="Digite seu email:"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-            <p>Precisa de ajuda? Entre no <span>Me Ajude, Zé!</span> </p>
+          <input
+            type="text"
+            placeholder="Digite sua senha:"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button type="submit" className="email">
+            Continuar com E-mail
+          </button>
+
+          <p>
+            Precisa de ajuda? Entre no <span>Me Ajude, Zé!</span>{" "}
+          </p>
         </form>
       </main>
     </>
@@ -52,3 +71,44 @@ function Login() {
 }
 
 export default Login;
+
+
+
+// // ter icone que mostra senha
+// const [showPassword, setShowPassword] = useState(false); // Novo estado para controlar a visibilidade da senha
+
+// <div className="password-container">
+//   <input
+//     type={showPassword ? "text" : "password"} // Controla o tipo do campo de entrada
+//     placeholder="Digite sua senha:"
+//     value={password}
+//     onChange={(e) => setPassword(e.target.value)}
+//   />
+//   <button
+//     type="button"
+//     onClick={() => setShowPassword(!showPassword)} // Alterna a visibilidade da senha
+//     className="toggle-password"
+//   >
+//     {showPassword ? "👁️" : "🙈"} {/* Usando emojis como ícones */}
+//   </button>
+// </div>;
+
+// // CSS
+// .password-container {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .password-container input {
+//   flex: 1;
+// }
+
+// .toggle-password {
+//   background: none;
+//   border: none;
+//   cursor: pointer;
+//   font-size: 1.2em;
+//   padding-left: 0.5em;
+// }
+
+
